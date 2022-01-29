@@ -1,3 +1,5 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import {
   SafeAreaView,
@@ -14,10 +16,20 @@ import ExploreScreen from './screens/Explore';
 import ProfileScreen from './screens/Profile';
 import RestaurantScreen from './screens/Restaurants';
 
+const RootStack = createNativeStackNavigator();
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  return <RestaurantScreen />
+  return (
+    <NavigationContainer>
+      <RootStack.Navigator>
+        <RootStack.Screen name='Explore' component={ExploreScreen} />
+        <RootStack.Screen name='Restaurants' component={RestaurantScreen} />
+        <RootStack.Screen name='Profile' component={ProfileScreen} />
+      </RootStack.Navigator>
+    </NavigationContainer>
+  )
 };
 
 const styles = StyleSheet.create({
