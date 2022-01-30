@@ -1,3 +1,3 @@
-# food_delivery_typescript
+# Food Delivery Project
 
 A simple React Native Project written in TypeScript. 
