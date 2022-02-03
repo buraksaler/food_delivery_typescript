@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <RootStack.Navigator>
+      <RootStack.Navigator initialRouteName='Explore'>
         <RootStack.Screen name='Explore' component={ExploreScreen} />
         <RootStack.Screen name='Restaurants' component={RestaurantScreen} />
         <RootStack.Screen name='Profile' component={ProfileScreen} />
